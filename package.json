@@ -1,0 +1,17 @@
+{
+  "name": "com.dbresults.calculatorplugin",
+  "version": "1.0.0",
+  "description": "This is a calculator plugin",
+  "cordova": {
+    "id": "com.dbresults.calculatorplugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Ali Asghar Akmad",
+  "license": "ISC"
+}
