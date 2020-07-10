@@ -1,10 +1,6 @@
-/********* CalculatorPlugin.m Cordova Plugin Implementation *******/
-
 #import <Cordova/CDV.h>
 
-@interface CalculatorPlugin : CDVPlugin {
-  // Member variables go here.
-}
+@interface CalculatorPlugin : CDVPlugin 
 
 - (void)coolMethod:(CDVInvokedUrlCommand*)command;
 
