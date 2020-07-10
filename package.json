@@ -5,13 +5,23 @@
   "cordova": {
     "id": "com.dbresults.calculatorplugin",
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   },
   "keywords": [
     "ecosystem:cordova",
-    "cordova-android"
+    "cordova-android",
+    "cordova-ios"
   ],
   "author": "Ali Asghar Akmad",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliitotz/calculator-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aliitotz/calculator-plugin/issues"
+  },
+  "homepage": "https://github.com/aliitotz/calculator-plugin#readme"
 }
