@@ -16,16 +16,18 @@ import android.app.AlertDialog;
 public class CalculatorPlugin extends CordovaPlugin {
     
     AlertDialog.Builder builder;
+    Context context;
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+        context = this.cordova.getActivity().getApplicationContext();
         if (action.equals("coolMethod")) {
             //int arg1 = args.getInt(0);
             //int arg2 = args.getInt(1);
 
             //int result = arg1 + arg2;
             callbackContext.success(args);
-            Toast.makeText(this.cordova.getActivity().getApplicationContext(),"hello", Toast.LENGTH_LONG);
+            Toast.makeText(context,"hello", Toast.LENGTH_LONG);
             
             return true;
         }else if(action.equals("addOperation")){
@@ -37,15 +39,14 @@ public class CalculatorPlugin extends CordovaPlugin {
             
             ////alert dialog
             
-            builder = new AlertDialog.Builder(this);  
+            builder = new AlertDialog.Builder(context);  
   
             //Setting message manually and performing action on button click  
             builder.setMessage("Do you want to close this application ?")  
                     .setCancelable(false)  
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {  
                         public void onClick(DialogInterface dialog, int id) {  
-                            finish();  
-                            Toast.makeText(getApplicationContext(),"you choose yes action for alertbox",  
+                            Toast.makeText(context,"you choose yes action for alertbox",  
                             Toast.LENGTH_SHORT).show();  
                         }  
                     })  
@@ -53,7 +54,7 @@ public class CalculatorPlugin extends CordovaPlugin {
                         public void onClick(DialogInterface dialog, int id) {  
                             //  Action for 'NO' Button  
                             dialog.cancel();  
-                            Toast.makeText(getApplicationContext(),"you choose no action for alertbox",  
+                            Toast.makeText(context,"you choose no action for alertbox",  
                             Toast.LENGTH_SHORT).show();  
                         }  
                     });  
@@ -71,7 +72,7 @@ public class CalculatorPlugin extends CordovaPlugin {
 
             int result = arg1 - arg2;
             callbackContext.success(result);
-            Toast.makeText(this.cordova.getActivity().getApplicationContext(),"hello", Toast.LENGTH_LONG).show();
+            Toast.makeText(context,"hello", Toast.LENGTH_LONG).show();
             return true;
         }else if(action.equals("multiplyOperation")){
             int arg1 = args.getInt(0);
