@@ -30,7 +30,7 @@ public class CalculatorPlugin extends CordovaPlugin {
 
             int result = arg1 + arg2;
             callbackContext.success(result);
-            Toast.makeText(this.cordova.getActivity().getApplicationContext(),"hello", Toast.LENGTH_LONG);
+            Toast.makeText(this.cordova.getActivity().getApplicationContext(),"hello", Toast.LENGTH_LONG).show();
             return true;
         }else if(action.equals("subtractOperation")){
             int arg1 = args.getInt(0);
@@ -38,7 +38,7 @@ public class CalculatorPlugin extends CordovaPlugin {
 
             int result = arg1 - arg2;
             callbackContext.success(result);
-            Toast.makeText(this.cordova.getActivity().getApplicationContext(),"hello", Toast.LENGTH_LONG);
+            Toast.makeText(this.cordova.getActivity().getApplicationContext(),"hello", Toast.LENGTH_LONG).show();
             return true;
         }else if(action.equals("multiplyOperation")){
             int arg1 = args.getInt(0);
