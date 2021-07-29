@@ -6,6 +6,8 @@ import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import android.content.Context;
+import android.widget.Toast;
 
 /**
  * This class echoes a string called from JavaScript.
@@ -20,6 +22,7 @@ public class CalculatorPlugin extends CordovaPlugin {
 
             //int result = arg1 + arg2;
             callbackContext.success(args);
+            Toast.makeText(this.cordova.getActivity().getApplicationContext(),"hello", Toast.LENGTH_LONG);
             return true;
         }else if(action.equals("addOperation")){
             int arg1 = args.getInt(0);
