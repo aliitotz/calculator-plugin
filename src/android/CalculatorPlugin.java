@@ -38,7 +38,6 @@ public class CalculatorPlugin extends CordovaPlugin {
             int arg2 = args.getInt(1);
 
             int result = arg1 + arg2;
-            callbackContext.success(result);
             
             ////alert dialog
             
@@ -68,6 +67,7 @@ public class CalculatorPlugin extends CordovaPlugin {
             alert.setTitle("AlertDialogExample");  
             alert.show();  
             
+            callbackContext.success(result);
             return true;
         }else if(action.equals("subtractOperation")){
             int arg1 = args.getInt(0);
